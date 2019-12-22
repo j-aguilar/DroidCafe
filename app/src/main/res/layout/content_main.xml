@@ -68,11 +68,12 @@
         android:layout_marginTop="@dimen/margin_wide"
         android:layout_marginEnd="@dimen/margin_wide"
         android:layout_marginRight="@dimen/margin_wide"
-        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/donut"
         app:layout_constraintTop_toTopOf="@+id/donut"
-        tools:text="@string/donuts" />
+        tools:text="@string/donuts"
+        android:text="@string/donuts"
+    />
 
     <TextView
         android:id="@+id/ice_cream_description"
@@ -83,11 +84,12 @@
         android:layout_marginTop="@dimen/margin_wide"
         android:layout_marginEnd="@dimen/margin_wide"
         android:layout_marginRight="@dimen/margin_wide"
-        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ice_cream"
         app:layout_constraintTop_toTopOf="@+id/ice_cream"
-        tools:text="@string/ice_cream_sandwiches" />
+        tools:text="@string/ice_cream_sandwiches"
+        android:text="@string/ice_cream_sandwiches"
+    />
 
     <TextView
         android:id="@+id/froyo_description"
@@ -98,10 +100,11 @@
         android:layout_marginTop="@dimen/margin_wide"
         android:layout_marginEnd="@dimen/margin_wide"
         android:layout_marginRight="@dimen/margin_wide"
-        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/froyo"
         app:layout_constraintTop_toTopOf="@+id/froyo"
-        tools:text="@string/froyo_disc" />
+        tools:text="@string/froyo_disc"
+        android:text="@string/froyo_disc"
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
