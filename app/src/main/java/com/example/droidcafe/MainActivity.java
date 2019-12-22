@@ -30,9 +30,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, OrderActivity.class);
-                intent.putExtra(EXTRA_MESSAGE, mOrderMessage);
-                startActivity(intent);
+                orderActivityIntention(mOrderMessage);
             }
         });
     }
@@ -51,11 +49,23 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_order) {
-            return true;
+        // toolbar option selection
+        switch (item.getItemId()) {
+            case R.id.action_order:
+                orderActivityIntention(mOrderMessage);
+                return true;
+            case R.id.action_status:
+                displayToast(getString(R.string.action_status_message));
+                return true;
+            case R.id.action_favorites:
+                displayToast(getString(R.string.action_favorites_message));
+                return true;
+            case R.id.action_contact:
+                displayToast(getString(R.string.action_contact_message));
+                return true;
+            default:
+                //Do nothing
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -79,5 +89,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void displayToast(String message) {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+    }
+
+    private void orderActivityIntention (String message){
+        Intent intent = new Intent(MainActivity.this, OrderActivity.class);
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
     }
 }
