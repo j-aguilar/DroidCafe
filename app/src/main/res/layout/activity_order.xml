@@ -18,5 +18,107 @@
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <TextView
+        android:id="@+id/name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_tall"
+        android:text="@string/name_label_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_tv"
+    />
+
+    <EditText
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/enter_name_hint"
+        android:layout_marginStart="@dimen/margin_thin"
+        android:layout_marginLeft="@dimen/margin_thin"
+        app:layout_constraintBaseline_toBaselineOf="@id/name_label"
+        app:layout_constraintStart_toEndOf="@id/name_label"
+    />
+
+    <TextView
+        android:id="@+id/address_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/address_label"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_wide"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_label"
+    />
+
+    <EditText
+        android:id="@+id/address_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:hint="@string/enter_address_hint"
+        android:layout_marginStart="@dimen/margin_thin"
+        android:layout_marginLeft="@dimen/margin_thin"
+        app:layout_constraintBaseline_toBaselineOf="@id/address_label"
+        app:layout_constraintStart_toEndOf="@id/address_label"
+    />
+
+    <TextView
+        android:id="@+id/phone_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_label"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_wide"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address_text"
+    />
+
+    <EditText
+        android:id="@+id/phone_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:hint="Enter phone"
+        android:layout_marginStart="@dimen/margin_thin"
+        android:layout_marginLeft="@dimen/margin_thin"
+        app:layout_constraintBaseline_toBaselineOf="@id/phone_label"
+        app:layout_constraintStart_toEndOf="@id/phone_label"
+    />
+
+    <TextView
+        android:id="@+id/note_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/note_label"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_wide"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_label"
+    />
+
+    <EditText
+        android:id="@+id/note_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textCapSentences|textMultiLine"
+        android:ems="10"
+        android:hint="@string/enter_note_text"
+        android:layout_marginStart="@dimen/margin_thin"
+        android:layout_marginLeft="@dimen/margin_thin"
+        app:layout_constraintBaseline_toBaselineOf="@id/note_label"
+        app:layout_constraintStart_toEndOf="@id/note_label"
+    />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
