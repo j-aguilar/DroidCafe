@@ -29,4 +29,5 @@
     <string name="same_day_message_service">Same day message service</string>
     <string name="next_day_ground_delivery">Next day ground delivery</string>
     <string name="pick_up">Pick up</string>
+    <string name="tittle_activity_order">Order Activity</string>
 </resources>
